@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prototipo.View.principalPage"
+             xmlns:vm="clr-namespace:prototipo.ViewModel"
+             BackgroundImage="hotelFlore.jpg">
+    <ContentPage.BindingContext>
+        <vm:principalPageViewModel></vm:principalPageViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo.jpg" Margin="10,30" ></Image>
+            <StackLayout Margin="20,200,20,10" HeightRequest="300">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button WidthRequest="150" 
+                            Text="Hotel" 
+                            Image="hotels.png" 
+                            Opacity="0.50" 
+                            TextColor="Black" 
+                            Grid.Column="0" 
+                            Grid.Row="0"
+                            Command="{Binding HotelComand}">
+                       
+                    </Button>
+                    <Button WidthRequest="150" 
+                            Text="Restaurante" 
+                            Image="restaurante.png" 
+                            Opacity="0.50" 
+                            TextColor="Black" 
+                            Grid.Column="1" 
+                            Grid.Row="0"
+                            Command="{Binding RestauranteCommand}">
+                        
+                    </Button>
+                    <Button WidthRequest="150" 
+                            Text="Negocios" 
+                            Image="ofrecer.png" 
+                            Opacity="0.50" 
+                            TextColor="Black" 
+                            Grid.Column="0" 
+                            Grid.Row="1"
+                            Command="{Binding ReunionesNegociosCommand}">
+                        
+                    </Button>
+                    <Button WidthRequest="150" 
+                            Text="Celebraciones" 
+                            Image="pastel.png" 
+                            Opacity="0.50" 
+                            TextColor="Black" 
+                            Grid.Column="1" 
+                            Grid.Row="1"
+                            Command="{Binding EventosSocialesCommand}">
+                        
+                    </Button>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
